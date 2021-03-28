@@ -22,7 +22,7 @@ var createNewTaskElement=function(taskString){
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
     //label
-    var label=document.createElement("label");//label
+    var label=document.createElement("p");//label
     //input (text)
     var editInput=document.createElement("input");//text
     //button.edit-button
@@ -32,11 +32,14 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
+    listItem.className="app-elements-li";
+
     label.innerText=taskString;
     label.className='label-task';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className="checkbox";
     editInput.type="text";
     editInput.className="input-text";
 
@@ -44,6 +47,7 @@ var createNewTaskElement=function(taskString){
     editButton.className="edit-button";
 
     deleteButton.className="delete";
+    deleteButtonImg.className="delete-icon";
     deleteButtonImg.src='./remove.svg';
     deleteButton.appendChild(deleteButtonImg);
 
@@ -59,12 +63,13 @@ var createNewTaskElement=function(taskString){
 
 
 
-var addTask=function(){
+var addTask=function(e){
+    e.preventDefault();
     console.log("Add Task...");
     //Create a new list item with the text from the #new-task:
     if (!taskInput.value) return;
     var listItem=createNewTaskElement(taskInput.value);
-
+    
     //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
@@ -83,7 +88,7 @@ var editTask=function(){
     var listItem=this.parentNode;
 
     var editInput=listItem.querySelector('input[type=text]');
-    var label=listItem.querySelector("label");
+    var label=listItem.querySelector("p");
     var editBtn=listItem.querySelector(".edit-button");
     var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .editmode
@@ -93,13 +98,15 @@ var editTask=function(){
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
+        listItem.classList.remove("edit-mode");
     }else{
         editInput.value=label.innerText;
         editBtn.innerText="Save";
+        listItem.classList.add("edit-mode");
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("edit-mode");
+    
 };
 
 

@@ -1,4 +1,7 @@
 /* Basic Style */
+
+
+
 .page {
   background-color: #f8f8f8;
   color: #333;
@@ -7,7 +10,7 @@
 
 .header {
   width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
   display: block;
   text-align: right;
 }
@@ -35,6 +38,10 @@
   margin: 0 auto 0;
 }
 
+#section-add-new-task {
+  margin-bottom: 15px;
+}
+
 .input-text,
 .label-task {
   width: 56%;
@@ -46,7 +53,8 @@
   display: flex;
 }
 
-ul {
+ul,
+p {
   margin: 0;
   padding: 0px;
 }
