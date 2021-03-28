@@ -128,9 +128,7 @@ button {
 }
 
 .section-add-task__button:hover {
-
   color: #0FC57C;
-
 }
 
 /* Task list */
@@ -164,9 +162,7 @@ button {
 }
 
 .task-list__del-button:hover {
-
   color: #CF2323;
-
 }
 
 .task-list__del-icon {
