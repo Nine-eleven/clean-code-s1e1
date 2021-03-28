@@ -118,7 +118,7 @@ button {
 }
 
 /* New Task */
-.section-add-task__label[for="new-task"] {
+.section-add-task__label {
   display: block;
   margin: 0 0 20px;
 }
@@ -157,7 +157,7 @@ button {
   width: 226px;
 }
 
-.task-list__list-item > .section-add-task__input {
+.task-list__editor-input {
   width: 226px;
 }
 
