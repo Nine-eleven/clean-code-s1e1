@@ -10,49 +10,49 @@
   </head>
   <body class="page">
     <header class="header">
-      <img class="header-img" src="./eisenhower-matrix.jpg" alt="eisenhower-matrix">
-      <a class="link-more-info" 
+      <img class="header__img" src="./eisenhower-matrix.jpg" alt="eisenhower-matrix">
+      <a class="header__link" 
            href="https://goal-life.com/page/method/matrix-eisenhower">
            Want more details?</a>
     </header>
     <main class="app-elements">
-      <section id="section-add-new-task">
-        <h1 hidden>New task</h1>
-        <label class="section-heading" for="new-task">Add Item</label>
-        <form class="task-row-wrapper">
-          <input id="new-task"class="input-text" type="text">
-          <button class="adding-button">Add</button>
+      <section id="section-add-task">
+        <h2 hidden>New task</h2>
+        <label class="section-add-task__label" for="new-task">Add Item</label>
+        <form class="section-add-task__form-add">
+          <input id="new-task"class="section-add-task__input" type="text">
+          <button class="section-add-task__button">Add</button>
         </form>
       </section>
-      <h3 class="section-heading">Todo</h3>
-      <ul id="incomplete-tasks">
-        <li class="app-elements-li"><input class="checkbox" type="checkbox">
-          <p class="label-task">Pay Bills</p>
-          <input class="input-text" type="text">
-          <button class="edit-button">Edit</button>
-          <button class="delete">
-            <img class="delete-icon" src="./remove.svg" alt="delete-task">
+      <h3 class="task-status-header">Todo</h3>
+      <ul class="task-list task-list_incomplete">
+        <li class="task-list__list-item"><input class="task-list__checkbox" type="checkbox">
+          <p class="task-list__task-name">Pay Bills</p>
+          <input class="task-list__editor-input" type="text">
+          <button class="task-list__editor-button">Edit</button>
+          <button class="task-list__del-button">
+            <img class="task-list__del-icon" src="./remove.svg" alt="delete-task">
           </button>
         </li>
-        <li  class="edit-mode app-elements-li">
-          <input class="checkbox" type="checkbox">
-          <p class="label-task">Go Shopping</p>
-          <input class="input-text" type="text" value="Go shopping">
-          <button class="edit-button">Save</button>
-          <button class="delete">
-            <img class="delete-icon" src="./remove.svg" alt="delete-task">
+        <li  class="task-list__list-item_edit-mode task-list__list-item">
+          <input class="task-list__checkbox" type="checkbox">
+          <p class="task-list__task-name">Go Shopping</p>
+          <input class="task-list__editor-input" type="text" value="Go shopping">
+          <button class="task-list__editor-button">Save</button>
+          <button class="task-list__del-button">
+            <img class="task-list__del-icon" src="./remove.svg" alt="delete-task">
           </button>
         </li>
       </ul>
-      <h3 class="section-heading">Completed</h3>
-      <ul id="completed-tasks">
-        <li class="app-elements-li">
-          <input class="checkbox" type="checkbox" checked>
-          <p class="label-task">See the Doctor</p>
-          <input type="text" class="input-text">
-          <button class="edit-button">Edit</button>
-          <button class="delete">
-            <img class="delete-icon" src="./remove.svg" alt="delete-task">
+      <h3 class="task-status-header">Completed</h3>
+      <ul class="task-list task-list_complete">
+        <li class="task-list__list-item">
+          <input class="task-list__checkbox" type="checkbox" checked>
+          <p class="task-list__task-name task-list__task-name_complete">See the Doctor</p>
+          <input type="text" class="task-list__editor-input">
+          <button class="task-list__editor-button">Edit</button>
+          <button class="task-list__del-button">
+            <img class="task-list__del-icon" src="./remove.svg" alt="delete-task">
           </button>
         </li>
       </ul>
