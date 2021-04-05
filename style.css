@@ -127,10 +127,6 @@ button {
   width: 318px;
 }
 
-.section-add-task__button:hover {
-  color: #0FC57C;
-}
-
 /* Task list */
 .task-list__list-item {
   overflow: hidden;
@@ -159,10 +155,6 @@ button {
 
 .task-list__editor-input {
   width: 226px;
-}
-
-.task-list__del-button:hover {
-  color: #CF2323;
 }
 
 .task-list__del-icon {
